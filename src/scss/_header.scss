@@ -1,0 +1,16 @@
+.headPart {
+    display: flex;
+    width: 80%;
+    flex-direction: raw;
+    flex-wrap: nowrap;
+    &__img {
+        width: 70px;
+        height: 70px;
+        margin-top: 5px;
+    }
+    &__header {
+        margin-left: 20px;
+        font-family: T-bold, sans-serif;
+        font-size: 3.5rem;
+    }
+}

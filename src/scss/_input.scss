@@ -1,0 +1,76 @@
+.input {
+    padding: 30px 30px 30px 30px;
+    width: 100%;
+    height: 200px;
+    margin-top: 30px;
+    border-radius: 30px;
+    background: #1c1c1c;
+    box-shadow:  20px 20px 40px #0f0f0f;
+    display: flex;
+    flex-direction: raw;
+    flex-wrap: nowrap;
+    &__inputs{
+        width: 100%;
+        background-color: #1c1c1c;
+        &__name {
+            width: 50%;
+            background-color: #1c1c1c;
+            border-bottom: solid white 2px;
+            font-family: T-bold, sans-serif;
+            font-size: 30px;
+            transition-duration: 1s;
+            padding-left: 10px;
+            opacity: 0.5;
+        }
+        &__name:focus {
+            opacity: 1;
+            width: 90%;
+        }
+        &__task {
+            width: 90%;
+            height: 30px;
+            text-align: left;
+            margin-top: 20px;
+            background-color: #1c1c1c;
+            border-bottom: solid white 0.1px;
+            padding-bottom: 5px;
+            font-size: 20px;
+            transition-duration: 1s;
+            padding-left: 10px;
+            opacity: 0.5;
+            resize: none;
+        }
+        &__task:focus {
+            opacity: 1;
+            height: 60%;
+        }
+    }
+    
+    &__create {
+        margin-top: auto;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        color: lime;
+        font-family: T-bold, sans-serif;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__img {
+            width: 70%;
+            height: 70%;
+            background-color: white;
+            transition-duration: 1s;
+            transition-timing-function: ease;
+            &:hover {
+                width: 75%;
+                height: 75%;
+            }
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

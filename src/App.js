@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import {useState, useRef, useEffect} from 'react'
+import Todos from './Todos'
+export default function App() {
+  const [Update, toUpdate] = useState(true)
+  const [todos, setTodos] = useState([])
+  const name = useRef(null)
+  const task = useRef(null)
+  function createTodo() {
+    setTodos(()=>{
+      let todoCopy = todos
+      todoCopy.push({id: todos.length, name: name.current, task: task.current})
+      return todoCopy
+    })
+    toUpdate(!Update)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div className="todos">
+        <div className="input">
+          <div className="input__inputs">
+            <input onChange={e=>name.current = e.currentTarget.value} maxLength="25" type="text" className="input__inputs__name" placeholder="Название" />
+            <textarea onChange={e=>task.current = e.currentTarget.value} maxLength="230" className="input__inputs__task" placeholder="Задание"></textarea>
+          </div>
+          <button onClick={createTodo} className="input__create"><img className="input__create__img" src="./add.png"/></button>
+        </div>
+      </div>
+      <Todos list={todos}/>
+    </>);
 }
-
-export default App;
