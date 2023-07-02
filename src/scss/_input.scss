@@ -1,6 +1,6 @@
 .input {
     padding: 30px 30px 30px 30px;
-    width: 100%;
+    width: 90%;
     height: 200px;
     margin-top: 30px;
     border-radius: 30px;
@@ -9,6 +9,8 @@
     display: flex;
     flex-direction: raw;
     flex-wrap: nowrap;
+    animation-name: appearInput;
+    animation-duration: 1s;
     &__inputs{
         width: 100%;
         background-color: #1c1c1c;
@@ -78,5 +80,15 @@
         align-items: center;
         justify-content: center;
         background-color: #1c1c1c;
+    }
+}
+@keyframes appearInput {
+    from {
+        width: 1%;
+        opacity: 0;
+    }
+    to {
+        width: 90%;
+        opacity: 1;
     }
 }

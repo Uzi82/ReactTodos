@@ -43,7 +43,7 @@
 
 .input {
   padding: 30px 30px 30px 30px;
-  width: 100%;
+  width: 90%;
   height: 200px;
   margin-top: 30px;
   border-radius: 30px;
@@ -52,6 +52,8 @@
   display: flex;
   flex-direction: raw;
   flex-wrap: nowrap;
+  animation-name: appearInput;
+  animation-duration: 1s;
 }
 .input__inputs {
   width: 100%;
@@ -123,9 +125,19 @@
   background-color: #1c1c1c;
 }
 
+@keyframes appearInput {
+  from {
+    width: 1%;
+    opacity: 0;
+  }
+  to {
+    width: 90%;
+    opacity: 1;
+  }
+}
 .listElement {
   padding: 30px 30px 30px 30px;
-  width: 100%;
+  width: 90%;
   height: 200px;
   margin-top: 30px;
   border-radius: 30px;
@@ -134,6 +146,8 @@
   display: flex;
   flex-direction: raw;
   flex-wrap: nowrap;
+  animation-name: appearEl;
+  animation-duration: 2s;
 }
 .listElement__elements {
   width: 100%;
@@ -161,6 +175,16 @@
   padding-left: 10px;
 }
 
+@keyframes appearEl {
+  from {
+    opacity: 0;
+    height: 1px;
+  }
+  to {
+    opacity: 1;
+    height: 200px;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -219,6 +243,7 @@ main {
   display: flex;
   justify-content: center;
   margin-top: 40px;
+  margin-bottom: 20px;
   height: 50px;
   align-items: center;
 }
@@ -237,6 +262,7 @@ main {
   height: 50px;
   width: 55%;
   font-size: 30px;
+  cursor: pointer;
 }
 
 .DeleteButtonContent {

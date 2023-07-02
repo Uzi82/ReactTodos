@@ -1,6 +1,6 @@
 .listElement {
     padding: 30px 30px 30px 30px;
-    width: 100%;
+    width: 90%;
     height: 200px;
     margin-top: 30px;
     border-radius: 30px;
@@ -9,6 +9,8 @@
     display: flex;
     flex-direction: raw;
     flex-wrap: nowrap;
+    animation-name: appearEl;
+    animation-duration: 2s;
     &__elements{
         width: 100%;
         background-color: #1c1c1c;
@@ -33,5 +35,15 @@
             transition-duration: 1s;
             padding-left: 10px;
         }
+    }
+}
+@keyframes appearEl {
+    from {
+        opacity: 0;
+        height: 1px;
+    }
+    to {
+        opacity: 1;
+        height: 200px;
     }
 }
