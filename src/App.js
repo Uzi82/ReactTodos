@@ -1,16 +1,12 @@
-import {useState, useRef, useEffect} from 'react'
+import {useState, useRef} from 'react'
 import Todos from './Todos'
 export default function App() {
   const [Update, toUpdate] = useState(true)
-  const [todos, setTodos] = useState([])
   const name = useRef(null)
   const task = useRef(null)
   function createTodo() {
-    setTodos(()=>{
-      let todoCopy = todos
-      todoCopy.push({id: todos.length, name: name.current, task: task.current})
-      return todoCopy
-    })
+    let key = Math.random()*1000
+    localStorage.setItem(key, `${name.current}${key}${task.current}`)
     toUpdate(!Update)
   }
   return (
@@ -21,9 +17,11 @@ export default function App() {
             <input onChange={e=>name.current = e.currentTarget.value} maxLength="25" type="text" className="input__inputs__name" placeholder="Название" />
             <textarea onChange={e=>task.current = e.currentTarget.value} maxLength="230" className="input__inputs__task" placeholder="Задание"></textarea>
           </div>
-          <button onClick={createTodo} className="input__create"><img className="input__create__img" src="./add.png"/></button>
+          <div className='input__buttonContent'>
+            <button onClick={createTodo} className="input__create"><img className="input__create__img" src="./add.png"/></button>
+          </div>
         </div>
       </div>
-      <Todos list={todos}/>
+      <Todos />
     </>);
 }

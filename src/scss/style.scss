@@ -2,6 +2,7 @@
 @import "_iconanimation";
 @import "_header";
 @import "_input";
+@import "_listEl";
 * {
     padding: 0;
     margin: 0;
@@ -11,6 +12,9 @@
     font-family: T-regular, sans-serif;
     overflow-x: hidden;
     outline: none;
+}
+button {
+    background-color: #1c1c1c;
 }
 body {
     width: 100vw;
@@ -22,7 +26,8 @@ body {
 }
 main {
     vertical-align: middle;
-    width: 75%;
+    width: 40%;
+    margin-top: 50px;
 }
 .line {
     width: 100%;
@@ -43,4 +48,47 @@ main {
 ::-webkit-scrollbar-button {
     width: 0;
     height: 0;
+}
+.ClearBtnContent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    height: 50px;
+    align-items: center;
+}
+.ClearBtn {
+    width: 50%;
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    font-family: T-bold, sans-serif;
+    font-size: 25px;
+    transition-duration: 1s;
+    &:hover{
+        height: 50px;
+        width: 55%;
+        font-size: 30px;
+    }
+}
+.DeleteButtonContent {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    justify-content: center;
+    background-color: #1c1c1c;
+}
+.DeleteButton {
+    width: 40px;
+    height: 40px;
+    transition-duration: 1s;
+    &:hover{
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+    background-color: #1c1c1c;
 }

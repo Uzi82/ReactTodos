@@ -92,8 +92,8 @@
 .input__create {
   margin-top: auto;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: white;
   color: lime;
   font-family: T-bold, sans-serif;
@@ -101,20 +101,64 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-duration: 1s;
 }
 .input__create__img {
   width: 70%;
   height: 70%;
   background-color: white;
-  transition-duration: 1s;
-  transition-timing-function: ease;
-}
-.input__create__img:hover {
-  width: 75%;
-  height: 75%;
 }
 .input__create:hover {
   cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+.input__buttonContent {
+  width: 60px;
+  height: 60px;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c1c1c;
+}
+
+.listElement {
+  padding: 30px 30px 30px 30px;
+  width: 100%;
+  height: 200px;
+  margin-top: 30px;
+  border-radius: 30px;
+  background: #1c1c1c;
+  box-shadow: 20px 20px 40px #0f0f0f;
+  display: flex;
+  flex-direction: raw;
+  flex-wrap: nowrap;
+}
+.listElement__elements {
+  width: 100%;
+  background-color: #1c1c1c;
+}
+.listElement__elements__name {
+  width: 90%;
+  background-color: #1c1c1c;
+  border-bottom: solid white 2px;
+  font-family: T-bold, sans-serif;
+  font-size: 30px;
+  transition-duration: 1s;
+  padding-left: 10px;
+}
+.listElement__elements__task {
+  width: 90%;
+  height: 60px;
+  text-align: left;
+  margin-top: 20px;
+  background-color: #1c1c1c;
+  border-bottom: solid white 0.1px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  transition-duration: 1s;
+  padding-left: 10px;
 }
 
 * {
@@ -128,6 +172,10 @@
   outline: none;
 }
 
+button {
+  background-color: #1c1c1c;
+}
+
 body {
   width: 100vw;
   min-height: 100vh;
@@ -139,7 +187,8 @@ body {
 
 main {
   vertical-align: middle;
-  width: 75%;
+  width: 40%;
+  margin-top: 50px;
 }
 
 .line {
@@ -163,4 +212,51 @@ main {
 ::-webkit-scrollbar-button {
   width: 0;
   height: 0;
+}
+
+.ClearBtnContent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  height: 50px;
+  align-items: center;
+}
+
+.ClearBtn {
+  width: 50%;
+  height: 40px;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  font-family: T-bold, sans-serif;
+  font-size: 25px;
+  transition-duration: 1s;
+}
+.ClearBtn:hover {
+  height: 50px;
+  width: 55%;
+  font-size: 30px;
+}
+
+.DeleteButtonContent {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  justify-content: center;
+  background-color: #1c1c1c;
+}
+
+.DeleteButton {
+  width: 40px;
+  height: 40px;
+  transition-duration: 1s;
+  background-color: #1c1c1c;
+}
+.DeleteButton:hover {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
 }
