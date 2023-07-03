@@ -1,0 +1,55 @@
+@media screen and (min-width: 767px) and (max-width: 1023px){
+    main {
+        vertical-align: middle;
+        width: 90%;
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width: 767px){
+    main {
+        vertical-align: middle;
+        width: 90%;
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width: 500px){
+    main {
+        vertical-align: middle;
+        width: 95%;
+        margin-top: 10px;
+    }
+    .headPart {
+        &__img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+        &__header {
+            font-size: 2rem;
+            margin-top: 7px;
+        }
+    }
+    .input {
+        &__inputs{
+            &__name {
+                font-size: 25px;
+            }
+            &__task {
+                font-size: 15px;
+            }
+        }
+        
+        &__create {
+            width: 30px;
+            height: 30px;
+            &:hover {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        &__buttonContent{
+            width: 50px;
+            height: 50px;
+        }
+    }
+}

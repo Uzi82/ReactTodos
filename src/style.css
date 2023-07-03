@@ -53,7 +53,7 @@
   flex-direction: raw;
   flex-wrap: nowrap;
   animation-name: appearInput;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 .input__inputs {
   width: 100%;
@@ -103,7 +103,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition-duration: 1s;
+  transition-duration: 0.3s;
 }
 .input__create__img {
   width: 70%;
@@ -147,7 +147,7 @@
   flex-direction: raw;
   flex-wrap: nowrap;
   animation-name: appearEl;
-  animation-duration: 2s;
+  animation-duration: 0.5s;
 }
 .listElement__elements {
   width: 100%;
@@ -211,7 +211,7 @@ body {
 
 main {
   vertical-align: middle;
-  width: 40%;
+  width: 800px;
   margin-top: 50px;
 }
 
@@ -256,7 +256,7 @@ main {
   color: black;
   font-family: T-bold, sans-serif;
   font-size: 25px;
-  transition-duration: 1s;
+  transition-duration: 0.3s;
 }
 .ClearBtn:hover {
   height: 50px;
@@ -278,11 +278,60 @@ main {
 .DeleteButton {
   width: 40px;
   height: 40px;
-  transition-duration: 1s;
+  transition-duration: 0.3s;
   background-color: #1c1c1c;
 }
 .DeleteButton:hover {
   width: 50px;
   height: 50px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  main {
+    vertical-align: middle;
+    width: 90%;
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  main {
+    vertical-align: middle;
+    width: 90%;
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  main {
+    vertical-align: middle;
+    width: 95%;
+    margin-top: 10px;
+  }
+  .headPart__img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+  .headPart__header {
+    font-size: 2rem;
+    margin-top: 7px;
+  }
+  .input__inputs__name {
+    font-size: 25px;
+  }
+  .input__inputs__task {
+    font-size: 15px;
+  }
+  .input__create {
+    width: 30px;
+    height: 30px;
+  }
+  .input__create:hover {
+    width: 40px;
+    height: 40px;
+  }
+  .input__buttonContent {
+    width: 50px;
+    height: 50px;
+  }
 }

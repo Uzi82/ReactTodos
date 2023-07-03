@@ -10,7 +10,7 @@
     flex-direction: raw;
     flex-wrap: nowrap;
     animation-name: appearInput;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     &__inputs{
         width: 100%;
         background-color: #1c1c1c;
@@ -60,7 +60,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        transition-duration: 1s;
+        transition-duration: 0.3s;
         &__img {
             width: 70%;
             height: 70%;

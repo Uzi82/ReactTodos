@@ -5,11 +5,16 @@ export default function App() {
   const name = useRef(null)
   const task = useRef(null)
   function createTodo() {
-    let inputs = [document.querySelector('input'), document.querySelector('textarea')]
-    Array.from(inputs).map(el=>el.value='')
-    let key = Math.random()*1000
-    localStorage.setItem(key, `${name.current}${key}${task.current}`)
-    toUpdate(!Update)
+    if(name.current != null && task.current != null){
+      let inputs = [document.querySelector('input'), document.querySelector('textarea')]
+      Array.from(inputs).map(el=>el.value='')
+      let key = Math.random()*1000
+      localStorage.setItem(key, `${name.current}${key}${task.current}`)
+      toUpdate(!Update)
+      name.current = null
+      task.current = null
+    }
+    else return false
   }
   return (
     <>

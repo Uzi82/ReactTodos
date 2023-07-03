@@ -9,16 +9,21 @@ export default function Todos() {
     }
     console.log(todos)
     let render = []
-    render = todos.map((el) => {
-        return (
-            <li className="todos" key={el.key}>
-                <div className="listElement">
-                    <div className="listElement__elements">
-                        <h1 className="listElement__elements__name">{el.name}</h1>
-                        <p className="listElement__elements__task">{el.task}</p>
+    render = todos.map((el)=>{
+        return(
+            <>
+                <li className="todos" key={el.key}>
+                    <div className="listElement">
+                        <div className="listElement__elements">
+                            <h1 className="listElement__elements__name">{el.name}</h1>
+                            <p className="listElement__elements__task">{el.task}</p>
+                        </div>
+                        <div className='DeleteButtonContent'>
+                            <button onClick={()=>{localStorage.removeItem(el.key); toUpdate(!Update)}}><img className='DeleteButton' src='./delete.png'/></button>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>
+            </>
         )
     })
     return(
@@ -27,6 +32,5 @@ export default function Todos() {
             <div className={'ClearBtnContent'}>
                 <button className={'ClearBtn'} onClick={()=>{localStorage.clear(); toUpdate(!Update)}}>Clear</button>
             </div>
-        </>
-    )
+        </>)
 }

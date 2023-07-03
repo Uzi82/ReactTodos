@@ -26,7 +26,7 @@ body {
 }
 main {
     vertical-align: middle;
-    width: 40%;
+    width: 800px;
     margin-top: 50px;
 }
 .line {
@@ -66,7 +66,7 @@ main {
     color: black;
     font-family: T-bold, sans-serif;
     font-size: 25px;
-    transition-duration: 1s;
+    transition-duration: 0.3s;
     &:hover{
         height: 50px;
         width: 55%;
@@ -86,7 +86,7 @@ main {
 .DeleteButton {
     width: 40px;
     height: 40px;
-    transition-duration: 1s;
+    transition-duration: 0.3s;
     &:hover{
         width: 50px;
         height: 50px;
@@ -94,3 +94,4 @@ main {
     }
     background-color: #1c1c1c;
 }
+@import "_adaptive";
