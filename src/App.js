@@ -9,7 +9,7 @@ export default function App() {
       let inputs = [document.querySelector('input'), document.querySelector('textarea')]
       Array.from(inputs).map(el=>el.value='')
       let key = Math.random()*1000
-      localStorage.setItem(key, `${name.current}${key}${task.current}`)
+      localStorage.setItem(key, JSON.stringify({name: name.current, task: task.current}))
       toUpdate(!Update)
       name.current = null
       task.current = null
@@ -25,7 +25,7 @@ export default function App() {
             <textarea onChange={e=>{task.current = e.currentTarget.value}} maxLength="230" className="input__inputs__task" placeholder="Задание"></textarea>
           </div>
           <div className='input__buttonContent'>
-            <button onClick={createTodo} className="input__create"><img className="input__create__img" src="./add.png"/></button>
+            <button onClick={createTodo} className="input__create"><img className="input__create__img" src="./add.png" alt='+'/></button>
           </div>
         </div>
       </div>

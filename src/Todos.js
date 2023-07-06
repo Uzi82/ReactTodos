@@ -4,8 +4,8 @@ export default function Todos() {
     const [Update, toUpdate] = useState(true)
     for(let i=0; i<localStorage.length; i++){
         let key = localStorage.key(i)
-        let content = localStorage.getItem(key).split(key)
-        todos.push({key: key, name: content[0], task: content[1]})
+        let content = JSON.parse(localStorage.getItem(key))
+        todos.push({key: key, name: content.name, task: content.task})
     }
     console.log(todos)
     let render = []
@@ -19,7 +19,7 @@ export default function Todos() {
                             <p className="listElement__elements__task">{el.task}</p>
                         </div>
                         <div className='DeleteButtonContent'>
-                            <button onClick={()=>{localStorage.removeItem(el.key); toUpdate(!Update)}}><img className='DeleteButton' src='./delete.png'/></button>
+                            <button onClick={()=>{localStorage.removeItem(el.key); toUpdate(!Update)}}><img className='DeleteButton' src='./delete.png' alt='Del'/></button>
                         </div>
                     </div>
                 </li>
